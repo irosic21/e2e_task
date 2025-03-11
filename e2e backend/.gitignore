@@ -1,0 +1,54 @@
+# **Visual Studio / .NET build artifacts**
+.vs/
+bin/
+obj/
+out/
+
+# **User-specific files**
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.sln.cache
+
+# **Logs & Debugging**
+logs/
+*.log
+*.tlog
+*.pid
+*.pid.lock
+
+# **Configuration and Secrets**
+appsettings.Development.json
+appsettings.Local.json
+secrets.json
+*.env
+
+# **Dependency folders**
+node_modules/
+packages/
+wwwroot/lib/
+wwwroot/dist/
+
+# **Entity Framework Migrations**
+Migrations/
+*.mdf
+*.ldf
+
+# **Rider / JetBrains IDE**
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# **MacOS system files**
+.DS_Store
+._*
+
+# **Windows system files**
+Thumbs.db
+Desktop.ini
+
+# **Publish output**
+publish/
+publish_output/
