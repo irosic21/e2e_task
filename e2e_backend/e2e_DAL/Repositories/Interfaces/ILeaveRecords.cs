@@ -7,12 +7,11 @@ using System.Threading.Tasks;
 
 namespace e2e_DAL.Repositories.Interfaces
 {
-    public interface IEmployeeRepository
+    public interface ILeaveRecords
     {
-        Task<IEnumerable<Employee>> GetAllAsync();
-        Task<Employee> GetByIdAsync(int id);
-        Task AddAsync(Employee employee);
-        Task UpdateAsync(Employee employee);
+        Task<LeaveRecords> GetByIdAsync(int id);
+        Task AddAsync(LeaveRecords leaveRecords);
+        Task UpdateAsync(LeaveRecords leaveRecords);
         Task DeleteAsync(int id);
     }
 }

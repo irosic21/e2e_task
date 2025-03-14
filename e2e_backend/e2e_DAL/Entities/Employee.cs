@@ -14,5 +14,8 @@ namespace e2e_DAL.Entities
         public string Picture { get; set; }
         public string Gender { get; set; }
         public int YearOfBirth { get; set; }
+
+        public Contract Contract { get; set; }
+        public LeaveRecords LeaveRecords { get; set; }
     }
 }

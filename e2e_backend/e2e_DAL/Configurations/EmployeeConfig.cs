@@ -39,6 +39,16 @@ namespace e2e_DAL.Configurations
 
             builder.Property(e => e.YearOfBirth)
                 .HasColumnName("year_of_birth");
+
+            builder.HasOne(e => e.Contract)
+                .WithOne(c => c.Employee)
+                .HasForeignKey<Contract>(c => c.EmployeeId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            builder.HasOne(e => e.LeaveRecords)
+                .WithOne(lr => lr.Employee)
+                .HasForeignKey<LeaveRecords>(lr => lr.EmployeeId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }
