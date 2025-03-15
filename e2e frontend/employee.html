@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div class="header-container">
+        <h1>Employee Details</h1>
+        <button class="back-button" onclick="window.location.href='index.html'">Back to List</button>
+    </div>
+
+    <div class="cloud-container">
+
+        <div class="section">
+            <h2>Employee Information</h2>
+            <div class="employee-info">
+                <img id="employeePic" src="" alt="Employee Picture">
+                <div class="info-details">
+                    <p><strong>Name:</strong> <span id="empFullName"></span></p>
+                    <p><strong>Gender:</strong> <span id="empGender"></span></p>
+                    <p><strong>Year of Birth:</strong> <span id="empYearOfBirth"></span></p>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="section">
+            <h2>Leave Records</h2>
+            <p><strong>Vacation Days:</strong> <span id="vacationDays"></span></p>
+            <p><strong>Free Days:</strong> <span id="freeDays"></span></p>
+            <p><strong>Paid Leave Days:</strong> <span id="paidLeaveDays"></span></p>
+        </div>
+
+        <div class="section">
+            <h2>Contract Details</h2>
+            <p><strong>Department:</strong> <span id="empDepartment"></span></p>
+            <p><strong>Contract Type:</strong> <span id="contractType"></span></p>
+            <p><strong>Date of Employment:</strong> <span id="dateOfEmployment"></span></p>
+            <p><strong>Duration:</strong> <span id="duration"></span> months</p>
+        </div>
+
+        <div class="button-group">
+            <button class="delete-button" id="deleteButton">Delete</button>
+            <button class="update-button" onclick="window.location.href='form.html?edit=true&id=' + new URLSearchParams(window.location.search).get('id')">Update</button>
+        </div>
+
+    </div>
+
+    <script src="scripts/api.js"></script>
+    <script src="scripts/details.js"></script>
+</body>
+</html>
