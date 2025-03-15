@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace e2e_DAL.Repositories
 {
-    public class LeaveRecordsRepository : ILeaveRecords
+    public class LeaveRecordsRepository : ILeaveRecordsRepository
     {
         private readonly ApplicationDbContext _context;
         public LeaveRecordsRepository(ApplicationDbContext context)

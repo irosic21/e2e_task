@@ -21,7 +21,7 @@ namespace e2e_DAL.Configurations
             builder.Property(c => c.EmployeeId).HasColumnName("ID_employee");
             builder.Property(c => c.DateOfEmployment).HasColumnName("date_of_employment");
             builder.Property(c => c.ContractType).HasColumnName("contract_type").HasMaxLength(50);
-            builder.Property(c => c.DurationOfContract).HasColumnName("duration_of_contract").HasMaxLength(50);
+            builder.Property(c => c.DurationOfContract).HasColumnName("duration_of_contract");
             builder.Property(c => c.Department).HasColumnName("department").HasMaxLength(100);
         }
     }

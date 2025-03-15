@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace e2e_DAL.Repositories.Interfaces
 {
-    public interface ILeaveRecords
+    public interface ILeaveRecordsRepository
     {
         Task<LeaveRecords> GetByIdAsync(int id);
         Task AddAsync(LeaveRecords leaveRecords);
