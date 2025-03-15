@@ -23,6 +23,16 @@ namespace e2e_services.Helpers
             CreateMap<CreateContractDto, Contract>();
             CreateMap<Contract, ContractDto>();
             CreateMap<LeaveRecords, LeaveRecordsDto>();
+
+            //_----------------
+            CreateMap<CreateContractDto, ContractDto>();
+            CreateMap<CreateLeaveRecordsDto, LeaveRecordsDto>();
+            CreateMap<CreateEmployeeDto, EmployeeDto>();
+
+            CreateMap<UpdateEmployeeDto, EmployeeDto>();
+            CreateMap<UpdateContractDto, ContractDto>();
+            CreateMap<UpdateLeaveRecordsDto, LeaveRecordsDto>();
+
         }
     }
 }

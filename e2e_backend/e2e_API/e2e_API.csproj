@@ -10,4 +10,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\e2e_DAL\e2e_DAL.csproj" />
+    <ProjectReference Include="..\e2e_services\e2e_services.csproj" />
+  </ItemGroup>
+
 </Project>
