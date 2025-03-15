@@ -1,0 +1,270 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Main Title */
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin: 40px 0 20px 0;
+}
+
+/* Header Container (Title + Buttons) */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    width: 100%;
+    margin: 40px auto 20px;
+}
+
+/* Buttons */
+button, .add-button, .back-button, .submit-button, .cancel-button, .update-button, .delete-button {
+    padding: 12px 25px; /* Increase padding */
+    font-size: 1.2rem;  /* Larger font size */
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+}
+
+/* Default Button */
+button {
+    background-color: #333;
+    color: white;
+}
+
+button:hover {
+    background-color: #222;
+}
+
+/* Top Navigation Buttons (Back to List, Add Employee) */
+.add-button, .back-button {
+    background-color: #333;
+    color: white;
+}
+
+.add-button:hover, .back-button:hover {
+    background-color: #222;
+}
+
+/* Submit Button */
+.submit-button {
+    background-color: #333;
+    color: white;
+}
+
+.submit-button:hover {
+    background-color: #222;
+}
+
+/* Cancel Button (Dark Red Like Delete) */
+.cancel-button {
+    background-color: #b00020;
+    color: white;
+}
+
+.cancel-button:hover {
+    background-color: #8b001a;
+}
+
+/* Delete Button */
+.delete-button {
+    background-color: #b00020;
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: #8b001a;
+}
+
+/* Outer Cloud Container */
+.cloud-container {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+    max-width: 900px;
+    width: 100%;
+}
+
+/* Section Styling */
+.section {
+    background: #f5f5f5;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Titles */
+h2 {
+    text-align: center;
+    color: #444;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Name & Surname in One Row */
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.row input {
+    flex: 1;
+    width: 100%;
+}
+
+/* Input Box Styling */
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s ease-in-out;
+    background: #fff;
+}
+
+input:focus {
+    border-color: #666;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Employee List */
+ul {
+    list-style: none;
+    padding: 0;
+    max-width: 900px; /* Increased width */
+    width: 90%; /* Make it take most of the screen width */
+    margin: 20px auto;
+}
+
+/* Employee Card */
+li {
+    background: white;
+    margin: 15px 0;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    width: 100%; /* Ensure items use full width */
+    max-width: 850px; /* Slightly wider than before */
+}
+
+/* Hover effect */
+li:hover {
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+/* Make entire section clickable */
+li::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Employee Name */
+.employee-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    position: relative;
+    z-index: 2;
+}
+
+/* Department Box */
+.department {
+    background: #dcdcdc;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #555;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.department::before {
+    content: "Department: ";
+    font-weight: bold;
+    color: #222;
+}
+
+/* Employee Information Layout */
+.employee-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.employee-info img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+}
+
+.info-details {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 10px;
+}
+
+/* Employee Name Row */
+.row span {
+    flex: 1;
+    font-weight: bold;
+}
+
+/* Leave Records & Contract Details */
+p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+/* Bottom Action Buttons (Delete, Update, Cancel, Submit) */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px; /* More space between buttons */
+    margin-top: 25px; /* Adjust top margin */
+}
