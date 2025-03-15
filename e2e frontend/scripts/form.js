@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", async function () {
         const emp = await fetchEmployeeById(id);
         if (!emp) return;
 
-        // Pre-fill placeholders (so fields remain empty if not changed)
         document.getElementById("name").placeholder = emp.name;
         document.getElementById("surname").placeholder = emp.surname;
         document.getElementById("gender").placeholder = emp.gender;
@@ -22,12 +21,11 @@ document.addEventListener("DOMContentLoaded", async function () {
         document.getElementById("paidLeaveDays").placeholder = emp.leaveRecords.paidLeaveDays;
     }
 
-    // ✅ Ensure the cancel button correctly redirects
     document.getElementById("cancelButton").addEventListener("click", function () {
         if (isEdit) {
-            window.location.href = `employee.html?id=${id}`; // Redirect back to employee details if editing
+            window.location.href = `employee.html?id=${id}`; 
         } else {
-            window.location.href = "index.html"; // Redirect to home if adding a new employee
+            window.location.href = "index.html"; 
         }
     });
 

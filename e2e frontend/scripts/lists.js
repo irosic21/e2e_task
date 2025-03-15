@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", async function () {
             <div class="department">${emp.contract.department}</div>
         `;
         
-        // Make whole section clickable
         li.addEventListener("click", () => {
             window.location.href = `employee.html?id=${emp.id}`;
         });
